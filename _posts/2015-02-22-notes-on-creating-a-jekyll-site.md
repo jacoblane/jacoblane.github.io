@@ -193,4 +193,4 @@ exclude: ["node_modules", "gulpfile.js", "package.json", 'README.md']
 
 ### For the source
 
-[For the source] (https://github.com/jacoblane/jekyll-baseline)
+[github] (https://github.com/jacoblane/jekyll-baseline)
