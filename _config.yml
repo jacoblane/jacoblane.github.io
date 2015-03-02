@@ -1,0 +1,8 @@
+
+name: Jacob Lane's Blog
+description: Random stuff
+author: jacoblane
+
+markdown: redcarpet
+highlighter: pygments
+exclude: ["node_modules", "gulpfile.js", "package.json", 'README.md']

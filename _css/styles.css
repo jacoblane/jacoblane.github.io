@@ -1,0 +1,46 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,800);
+
+/* import from npm */
+@import "normalize.css";
+@import "basscss";
+
+/* import local files */
+@import "./syntax.css";
+
+:root {
+  --font-family: 'Open Sans','Helvetica Neue', Helvetica, sans-serif;
+  --heading-font-weight: 800;
+}
+
+/* add custom css and/or @import other files*/
+html {
+  font-size: 19px;
+}
+body {
+  font-weight: 300;
+}
+pre {
+  inherit: .p2;
+}
+code {
+  font-size: .8rem;
+  padding: 3px;
+}
+.home {
+  width: 70px;
+  height: 70px;
+  display: inline-block;
+  background-color: lightgoldenrodyellow;
+  transition: .5s;
+  position: fixed;
+  top: 7px;
+  left: 7px;
+}
+.arrow {
+  fill: #333;
+  transition: .5s;
+}
+
+.home:hover .arrow {
+  fill: #000;
+}
