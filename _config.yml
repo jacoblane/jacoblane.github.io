@@ -3,6 +3,8 @@ name: Blogatron
 description: Random stuff
 author: jacoblane
 
+segmentWriteKey: J5W4DJHQvI4QDHTIB8X2zw7MW6QtqZCJ
+
 markdown: redcarpet
 highlighter: pygments
 exclude: ["node_modules", "gulpfile.js", "package.json", 'README.md']
