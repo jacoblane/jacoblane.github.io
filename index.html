@@ -3,12 +3,14 @@ layout: default
 ---
 <h1>{{ site.name }}</h1>
 
-{% if site.posts %}
-  {% for post in site.posts %}
-    <article class="py1">
-      <a href="{{ post.url }}" title="{{ post.title }}">
-        {{ post.title }}
-      </a>
-    </article>
-  {% endfor %}
-{% endif %}
+<section class="py2">
+  {% if site.posts %}
+    {% for post in site.posts %}
+      <article class="py1">
+        <a href="{{ post.url }}" title="{{ post.title }}">
+          {{ post.title }}
+        </a>
+      </article>
+    {% endfor %}
+  {% endif %}
+</section>
