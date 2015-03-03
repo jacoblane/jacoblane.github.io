@@ -2240,9 +2240,14 @@ code {
   background-color: lightgoldenrodyellow;
   -webkit-transition: .5s;
           transition: .5s;
-  position: fixed;
-  top: 7px;
-  left: 7px;
+}
+
+@media (min-width: 52em) {
+  .home {
+    position: absolute;
+    top: 7px;
+    left: 7px;
+  }
 }
 
 .arrow {

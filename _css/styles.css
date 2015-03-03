@@ -32,9 +32,14 @@ code {
   display: inline-block;
   background-color: lightgoldenrodyellow;
   transition: .5s;
-  position: fixed;
-  top: 7px;
-  left: 7px;
+
+}
+@media (--breakpoint-md) {
+  .home {
+    position: absolute;
+    top: 7px;
+    left: 7px;
+  }
 }
 .arrow {
   fill: #333;
