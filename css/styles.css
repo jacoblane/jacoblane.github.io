@@ -1073,7 +1073,7 @@ pre {
 /* Basscss Grid */
 
 .container {
-  max-width: 64em;
+  max-width: 34em;
   margin-left: auto;
   margin-right: auto;
 }
@@ -2230,7 +2230,6 @@ body {
 
 code {
   font-size: .8rem;
-  padding: 3px;
 }
 
 .home {

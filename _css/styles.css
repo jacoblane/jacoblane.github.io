@@ -10,6 +10,7 @@
 :root {
   --font-family: 'Open Sans','Helvetica Neue', Helvetica, sans-serif;
   --heading-font-weight: 800;
+  --container-width: 34em;
 }
 
 /* add custom css and/or @import other files*/
@@ -24,7 +25,6 @@ pre {
 }
 code {
   font-size: .8rem;
-  padding: 3px;
 }
 .home {
   width: 70px;
