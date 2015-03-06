@@ -8,9 +8,9 @@ published: true
 
 ### What is rework?
 
-[Rework] (https://github.com/reworkcss/rework) is a CSS preprocessor [initiated] (http://tjholowaychuk.tumblr.com/post/44267035203/modular-css-preprocessing-with-rework) by TJ Holowaychuk. It is written in javascript and runs on [node] (http://nodejs.org), is super fast, simple (or complex) depending on your needs, and easy to extend to accomodate all sorts of CSS processing. Via node's package manager [npm](https://www.npmjs.com/search?q=rework) a variety of Rework plugins are available for color manipulation, variable assignments, selector inheritance, etc.
+[Rework] (https://github.com/reworkcss/rework) is a CSS preprocessor [initiated] (http://tjholowaychuk.tumblr.com/post/44267035203/modular-css-preprocessing-with-rework) by TJ Holowaychuk. It is written in javascript and runs on [node] (http://nodejs.org). It's super fast, simple, or complex, depending on your needs, and easy to extend to accomodate all sorts of CSS processing. Via node's package manager [npm](https://www.npmjs.com/search?q=rework) a variety of Rework plugins are available for color manipulation, variable assignments, selector inheritance, etc.
 
-The core idea behing Rework is simply to take some CSS, manipulate it, then create some new CSS. Because of this other preprocessors, like [SASS] () or [LESS] (), play nice with Rework. In other words, you can take SASS generated CSS and run it through Rework for additional processing. But, why not just create a Rework plugin to do the entire job?
+The core idea behing Rework is simply to take some CSS, manipulate it, then create some new CSS. Because of this other preprocessors, like [SASS] () or [LESS] (), play nice with Rework. In other words, you can take SASS generated CSS and run it through Rework for additional processing.
 
 ### Abstract Syntax Tree (AST)
 
@@ -95,7 +95,7 @@ Tada, we created a Rework plugin called `printAST`. This is what it console.logg
 
 ```
 
-The simple css `.special-text { color: red; }` has been converted into something a bit more robot-friendly. The `.special-text` selector (along with the its corrosponding delcarations) is now nicely tucked way inside the first `rule` in AST's `rules` property.
+The simple css `.special-text { color: red; }` has been converted into something a bit more robot-friendly. The `.special-text` selector (along with the its corresponding delcarations) is now nicely tucked way inside the first `rule` in AST's `rules` property.
 
 Under the hood, Rework is using [css] (https://github.com/reworkcss/css) to parse the CSS and build the AST. Check out the github repo for documentation.
 
