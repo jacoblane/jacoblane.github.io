@@ -22,7 +22,7 @@ Our index.js file, where the actual plugin code will live, will look like this:
 
 ```js
 var css = require('css');
-var blinkCss = '@keyframes blinky {  50% { opacity: 0 }}';
+var blinkCss = '@keyframes blinky {  50% { opacity: 0; } }';
 
 function blink() {
   return function(ast) {
