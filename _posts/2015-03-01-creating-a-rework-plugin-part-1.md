@@ -14,7 +14,7 @@ The core idea behind Rework is simply to take some CSS, manipulate it, then crea
 
 ### Abstract Syntax Tree (AST)
 
-Pulling back the curtain at bit, the basic concept is to feed Rework a string of CSS, which it transforms into a nicely organized data structure called an [abstract syntax tree (AST)] (http://en.wikipedia.org/wiki/Abstract_syntax_tree). This AST is then successively handed off to the plugins you've select to work some magic. Once the plugins have done their job, the AST is then reconstructed into a new string of CSS and voila. An example implementation looks something like this:
+Pulling back the curtain a bit, the basic concept is to feed Rework a string of CSS, which it transforms into a nicely organized data structure called an [abstract syntax tree (AST)] (http://en.wikipedia.org/wiki/Abstract_syntax_tree). This AST is then successively handed off to the plugins you've select to work some magic. Once the plugins have done their job, the AST is then reconstructed into a new string of CSS and voila. An example implementation looks something like this:
 
 ```js
 
@@ -95,13 +95,13 @@ Tada, we created a Rework plugin called `printAST`. This is what it console.logg
 
 ```
 
-The simple css `.special-text { color: red; }` has been converted into something a bit more robot-friendly. The `.special-text` selector (along with the its corresponding delcarations) is now nicely tucked way inside the first `rule` in AST's `rules` property.
+The simple css `.special-text { color: red; }` has been converted into something a bit more robot-friendly. The `.special-text` selector (along with the its corresponding delcarations) is now nicely tucked away inside the first `rule` in AST's `rules` property.
 
 Under the hood, Rework is using [css] (https://github.com/reworkcss/css) to parse the CSS and build the AST. Check out the github repo for documentation.
 
 ### A basic plugin
 
-Let's create something a bit more useful, that actually changes the CSS. Suppose we've written a new CSS framework, called "Rework-It!", that we want to use alongside some legacy CSS. To avoid any conflicting rules we want to namespace all our selectors in the new framework. For example, if we have a selector like `.button`, we want to namespace it like so `.rework-it-button`. Instead of going back to the source and manually adding this namespace, let's create a Rework plugin to do this as part of our build process.
+Let's create something a bit more useful, that actually changes the CSS. Suppose we've written a new CSS framework, called "Rework-It!", that we want to use alongside some legacy CSS. To avoid any conflicting rules we want to namespace all our selectors in the new framework. For example, if we have a selector like `.button`, we want to namespace to `.rework-it-button`. Instead of going back to the source and manually adding this namespace, let's create a Rework plugin to do this as part of our build process.
 
 ```javascript
 function namespaceReworkIt() {
