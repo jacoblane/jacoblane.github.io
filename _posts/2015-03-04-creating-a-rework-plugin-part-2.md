@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Creating a Rework Plugin, Part 2
-date: 2015-03-04
+title: "Creating a Rework Plugin, Part 2"
+date: {}
 keywords: rework
 published: false
 ---
 
-Continuing from a [previous post] (/2015/03/01/creating-a-rework-plugin-part-1.html) that covered the basics of [Rework] (https://github.com/reworkcss/rework), and how plugins manipulate an input CSS using an AST, this post will take the next step and create a new plugin, package it up, and publish it to [npm] (http://npmjs.com).
+Continuing from a [previous post] (2015/03/01/creating-a-rework-plugin-part-1.html) that covered the basics of [Rework] (https://github.com/reworkcss/rework) and how plugins manipulate CSS using an AST, this post will take the next step and create a new plugin, package it up, and publish it to [npm] (http://npmjs.com).
 
 ### Quick review
 
 Rework is a CSS preprocessor. You give it a string of CSS, call whatever plugins you want to manipulate this CSS, and finally recreate a new CSS string.
 
-Perhaps "preprocessor" is the wrong word, maybe Rework is better labeled simply a CSS "processor". It comes before the final CSS, but after its input.
+Perhaps "preprocessor" is the wrong word. It comes before the final CSS, but after its input. Maybe Rework is better labeled simply a CSS "processor".
 
 ### Plugin basics
 
@@ -25,7 +25,7 @@ Rework.prototype.use = function(fn){
 };
 ```
 
-So basically a plugin is just a simple function which Rework calls, passing `this.obj.stylesheet` (which is just the `stylesheet` propoerty of the full AST reprsentation of the input CSS), and the Rework instance itself (i.e. `this`).
+So basically a plugin is just a simple function which Rework calls, passing `this.obj.stylesheet` (which is just the `stylesheet` propoerty of the full AST representation of the input CSS), and the Rework instance itself (i.e. `this`).
 
 An example would look something like:
 
@@ -38,12 +38,9 @@ var newCss = rework('.special-text { color: red; }')
 
 ```
 
-Straighforward, right? But why does the the first plugin, `fakePlugin1`, looks a bit different from the second, `fakePlugin2`. The short answer is `fakePlugin2` is a closure, in other words, a function that returns a function. Rework is written in javascript, so no surprise we would find closures.
+Straighforward, right? But why does the the first plugin, `fakePlugin1` look a bit different from the second, `fakePlugin2(args)`. Bacially, `fakePlugin2` is a closure, which is to say, a function that returns a function. Rework is written in javascript, so no surprise we would find closures.
 
-This is difference is not trivial. If youa
-
-
-
+This is difference is not entirely trivial. If you try to use a closure-style plugin without the '()', it will not work. Most Rework plugins (annecodally at least) are closures, and thus require the parens.
 
 ### Packaging our plugin
 
